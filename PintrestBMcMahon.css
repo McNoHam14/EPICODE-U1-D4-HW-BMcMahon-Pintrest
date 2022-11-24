@@ -12,9 +12,9 @@ body {
     height: 550px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 20px;
+    border-radius: 25px / 25px;
     overflow: hidden;
-    transition: box-shadow 0.3s;
+    transition: box-shadow .2s;
     cursor: crosshair;
     /* box-shadow: black; 
     cast greater shawdow*/
@@ -22,7 +22,11 @@ body {
 
 .pintrest-card:hover {
     transition-duration: 500ms;
-    transition-duration: 800ms
+    box-shadow: 0 10px 40px -4px rgb(0 0 0 / 55%);
+}
+
+.pintrest-card:hover .pintrestSave {
+    zoom: 125%;
 }
 
 .pintrest-card img {
@@ -47,9 +51,7 @@ overlay {
 }
 
 */
-/* 
-    background-image: linearGradient() *
-
+/* background-image: linearGradient() */
 
 /*create new div for Save as coming from top */
 
@@ -58,7 +60,6 @@ overlay {
     right: 0;
     bottom: 0;
     left: 0;
-
     text-align: center;
     padding-bottom: 8px;
     padding-left: 8px;
@@ -70,50 +71,81 @@ overlay {
     position: absolute;
     top: 20px;
     right: 20px;
-    border-radius: 25%;
+    border-radius: 30%/ 40%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 15px;
     width: 100px;
-    height: 60px;
+    height: 30px;
     background-color: #e61212;
+    color: white;
+    cursor: grab;
+    transition: hidden 1s linear .2s;
 }
 
+/*
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+*/
 
 .pintrestLink {
     position: absolute;
+    font-size: 18px;
+    padding-left: 80px;
+    justify-content: space-evenly;
     bottom: 20px;
     left: 20px;
-    border-radius: 30%;
-    width: 110px;
+    border-radius: 30%/60%;
+    width: 90px;
     height: 50px;
     background-color: #e3761d;
+    cursor: grab;
 }
+
+.pintrestLink:hover {
+    zoom: 125%;
+}
+
 
 .pintrestMoreInfo {
     position: absolute;
+    font-size: 14px;
     bottom: 20px;
-    right: 20px;
+    right: 10px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     background-color: #e67c12;
+    cursor: grab;
 }
 
+
+.pintrestMoreInfo:hover {
+    zoom: 125%;
+}
 
 .pintrestDownload {
     position: absolute;
     bottom: 20px;
-    right: 140px;
+    right: 70px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     background-color: #e67c12;
+    cursor: grab;
 }
 
 
+.pintrestDownload:hover {
+    zoom: 125%;
+}
 
 
 /*
     display: block;
-    
     object-fit: cover;
     position: absolute;
     margin-left: auto;
